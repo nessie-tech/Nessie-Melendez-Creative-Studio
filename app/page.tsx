@@ -7,7 +7,7 @@ const services = [
     title: "Brand Strategy and Storytelling",
     titleLines: ["Brand Strategy", "and Storytelling"],
     caption:
-      "Visual identity, brand world creation, tone of voice, strategic messaging, cinematic storytelling, brand campaigns, digital activations.",
+      "Visual identity, brand world creation, cinematic storytelling, brand campaigns, digital activations.",
     mediaSrc: "/nessie-demo-reel.mp4",
     focalPoint: "50% 46%",
     posterLabel: "Brand world reel",

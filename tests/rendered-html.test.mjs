@@ -60,8 +60,10 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /Brand Strategy and Storytelling/);
   assert.match(
     html,
-    /Visual identity, brand world creation, tone of voice, strategic messaging, cinematic storytelling, brand campaigns, digital activations\./,
+    /Visual identity, brand world creation, cinematic storytelling, brand campaigns, digital activations\./,
   );
+  assert.doesNotMatch(html, /tone of voice/);
+  assert.doesNotMatch(html, /strategic messaging/);
   assert.doesNotMatch(html, /Define what your brand stands for/);
   assert.match(html, /Social Content/);
   assert.match(html, /tsa-social-demo\.mp4/);
