@@ -1,3 +1,4 @@
+import { HeroReel } from "./HeroReel";
 import { ServiceShowcase } from "./ServiceShowcase";
 
 const services = [
@@ -74,18 +75,7 @@ export default function Home() {
 
       <section className="hero-section" id="top">
         <div className="hero-media" aria-label="Nessie Melendez demo reel preview">
-          <video
-            className="hero-video"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-          >
-            <source src="/nessie-demo-reel.mp4" type="video/mp4" />
-            Demo reel placeholder. Add a compressed web reel at
-            /public/nessie-demo-reel.mp4 if this video does not load.
-          </video>
+          <HeroReel />
         </div>
 
         <div className="hero-copy">
