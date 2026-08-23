@@ -982,8 +982,8 @@ h3 {
 }
 
 .about-hero h1 {
-  max-width: 8ch;
-  font-size: clamp(3rem, 7vw, 6.6rem);
+  max-width: none;
+  font-size: clamp(2.7rem, 6.2vw, 5.7rem);
 }
 
 .about-portrait-frame {
@@ -1009,8 +1009,8 @@ h3 {
   top: clamp(2rem, 6.3vw, 5.7rem);
   left: clamp(1rem, 4vw, 3.4rem);
   z-index: 2;
-  width: max-content;
-  max-width: min(15ch, calc(100% - 2rem));
+  width: auto;
+  max-width: none;
   text-shadow: 0 0.2rem 2.5rem rgb(0 0 0 / 0.82);
 }
 
@@ -1252,8 +1252,9 @@ h3 {
   }
 
   .about-portrait-frame h1 {
-    max-width: calc(100% - 1.6rem);
-    font-size: clamp(2.05rem, 9.8vw, 3.2rem);
+    max-width: none;
+    font-size: clamp(1.85rem, 8.2vw, 2.85rem);
+    line-height: 0.96;
   }
 
   .button {
