@@ -1,12 +1,10 @@
+import { AboutTypewriter } from "./AboutTypewriter";
+
 const aboutIntro = [
   "I'm Nessie. With almost 20 years leading design innovation at a Fortune 50, I'm now consulting independently helping people, brands and businesses to tell their stories with creative AI. I offer deep brand-building experience paired with mastery in design innovation.",
   "I'm taking early founding clients through December 2026. In exchange for the early founding rate, I ask for a short portfolio piece after the engagement so I can share the work publicly. Disclaimer: I am not able to take CPG collaborations at this time.",
   "If you're building, growing or even just starting, let's connect. I'd love to get your creative story in motion.",
 ];
-
-const aboutGreetingLineOne = "Hello, I'm";
-const aboutGreetingLineTwo = "Nessie.";
-const aboutGreeting = `${aboutGreetingLineOne} ${aboutGreetingLineTwo}`;
 
 export default function AboutPage() {
   return (
@@ -33,33 +31,7 @@ export default function AboutPage() {
             alt="Nessie Melendez seated on a brown couch"
             src="/nessie-brown-couch.png"
           />
-          <h1 className="about-typewriter-title" aria-label={aboutGreeting}>
-            <span className="sr-only">Hello, I&apos;m Nessie.</span>
-            <span aria-hidden="true" className="about-title-line">
-              {Array.from(aboutGreetingLineOne).map((character, index) => (
-                <span
-                  className="about-title-letter"
-                  key={`${character}-${index}`}
-                  style={{ animationDelay: `${180 + index * 58}ms` }}
-                >
-                  {character === " " ? "\u00a0" : character}
-                </span>
-              ))}
-            </span>
-            <span aria-hidden="true" className="about-title-line about-title-name">
-              {Array.from(aboutGreetingLineTwo).map((character, index) => (
-                <span
-                  className="about-title-letter"
-                  key={`${character}-${index}`}
-                  style={{
-                    animationDelay: `${180 + (aboutGreetingLineOne.length + index) * 58}ms`,
-                  }}
-                >
-                  {character}
-                </span>
-              ))}
-            </span>
-          </h1>
+          <AboutTypewriter />
         </div>
         <div className="about-intro-panel">
           <div className="about-copy">
