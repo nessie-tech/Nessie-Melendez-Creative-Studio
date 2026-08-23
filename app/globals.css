@@ -687,7 +687,7 @@ h3 {
     transform 260ms ease;
 }
 
-.service-offer-media[data-playing="true"][data-ready="true"] .service-offer-video {
+.service-offer-media[data-playing="true"] .service-offer-video {
   opacity: 1;
 }
 
