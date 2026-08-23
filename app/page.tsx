@@ -90,9 +90,6 @@ export default function Home() {
               {heroPositioning.support}
             </p>
             <div className="hero-actions" aria-label="Primary calls to action">
-              <a className="button button-primary" href="#services">
-                View services
-              </a>
               <a className="button button-secondary" href="/start">
                 Start a project
               </a>
