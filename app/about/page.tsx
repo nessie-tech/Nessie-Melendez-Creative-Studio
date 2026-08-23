@@ -2,7 +2,6 @@ import { AboutTypewriter } from "./AboutTypewriter";
 
 const aboutIntro = [
   "With almost 18-plus years leading design innovation at a Fortune 50, I am now consulting independently, helping people, brands, and businesses tell their stories with creative AI.",
-  "I'm taking early founding clients through December.",
   "Disclaimer: I am not able to take CPG collaborations at this time.",
   "If you're building, growing, or even just starting, let's connect. I'd love to get your creative story in motion.",
 ];

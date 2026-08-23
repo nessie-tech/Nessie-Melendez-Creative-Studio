@@ -127,7 +127,7 @@ test("server-renders the restrained about page", async () => {
     html,
     /With almost 18-plus years leading design innovation at a Fortune 50, I am now consulting independently, helping people, brands, and businesses tell their stories with creative AI\./,
   );
-  assert.match(html, /I&#x27;m taking early founding clients through December\./);
+  assert.doesNotMatch(html, /I&#x27;m taking early founding clients through December\./);
   assert.match(html, /Disclaimer: I am not able to take CPG collaborations at this time\./);
   assert.match(html, /If you&#x27;re building, growing, or even just starting, let&#x27;s connect\./);
   assert.doesNotMatch(html, /In exchange for the early founding rate/);
