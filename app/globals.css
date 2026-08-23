@@ -235,7 +235,7 @@ a {
   transition: opacity 320ms ease;
 }
 
-.hero-video[data-playing="true"] {
+.hero-video[data-ready="true"] {
   opacity: 1;
 }
 
@@ -697,14 +697,24 @@ h3 {
   object-fit: cover;
   opacity: 0;
   filter: saturate(1.08) contrast(1.04);
+  pointer-events: none;
   transform: scale(1.01);
   transition:
     opacity 180ms ease,
     transform 260ms ease;
 }
 
-.service-offer-media[data-playing="true"] .service-offer-video {
+.service-offer-video[data-ready="true"] {
   opacity: 1;
+}
+
+.service-offer-video::-webkit-media-controls,
+.service-offer-video::-webkit-media-controls-panel,
+.service-offer-video::-webkit-media-controls-start-playback-button,
+.service-offer-video::-webkit-media-controls-play-button {
+  display: none !important;
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .service-offer-card:hover .service-offer-video,

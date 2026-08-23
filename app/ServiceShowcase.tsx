@@ -1,5 +1,7 @@
 "use client";
 
+import { AutoPlayVideo } from "./AutoPlayVideo";
+
 type Service = {
   label: string;
   title: string;
@@ -42,29 +44,11 @@ function ServiceCard({ service }: { service: Service }) {
         <span className="service-offer-poster">
           <span>{service.posterLabel}</span>
         </span>
-        <video
+        <AutoPlayVideo
           className="service-offer-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onTimeUpdate={(event) => {
-            const video = event.currentTarget;
-
-            if (
-              Number.isFinite(video.duration) &&
-              video.duration > 0 &&
-              video.currentTime >= video.duration - 0.08
-            ) {
-              video.currentTime = 0;
-              void video.play();
-            }
-          }}
+          src={service.mediaSrc}
           style={{ objectPosition: service.focalPoint }}
-        >
-          <source src={service.mediaSrc} type="video/mp4" />
-        </video>
+        />
       </span>
 
       <span className="service-offer-details">
