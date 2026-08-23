@@ -50,8 +50,8 @@ export default function StartPage() {
           <p className="eyebrow">Start here</p>
           <h1>TELL US ABOUT YOUR PROJECT.</h1>
           <p>
-            Share what you are building and what kind of creative support would
-            move your business forward.
+            We are ready to move your business forward. Share some details on
+            how we can best support you.
           </p>
         </div>
 

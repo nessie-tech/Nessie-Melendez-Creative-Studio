@@ -149,6 +149,10 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /START HERE/i);
   assert.match(html, /href="\/#top">Home/);
   assert.match(html, /TELL US ABOUT YOUR PROJECT\./);
+  assert.match(
+    html,
+    /We are ready to move your business forward\. Share some details on how we can best support you\./,
+  );
   assert.match(html, /Name/);
   assert.match(html, /Email/);
   assert.match(html, /Brand or business/);
