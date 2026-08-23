@@ -19,6 +19,15 @@ const budgetRanges = [
   "Not sure yet",
 ];
 
+const timelineRanges = [
+  "Select a timeline",
+  "As soon as possible",
+  "Next 2-4 weeks",
+  "Next 1-3 months",
+  "3+ months out",
+  "Not sure yet",
+];
+
 export default function StartPage() {
   return (
     <main className="site-shell about-shell">
@@ -82,16 +91,28 @@ export default function StartPage() {
             </div>
           </fieldset>
 
-          <label>
-            <span>Ballpark budget range</span>
-            <select name="budget" defaultValue={budgetRanges[0]}>
-              {budgetRanges.map((range) => (
-                <option disabled={range === budgetRanges[0]} key={range}>
-                  {range}
-                </option>
-              ))}
-            </select>
-          </label>
+          <div className="form-row">
+            <label>
+              <span>Timeline</span>
+              <select name="timeline" defaultValue={timelineRanges[0]}>
+                {timelineRanges.map((range) => (
+                  <option disabled={range === timelineRanges[0]} key={range}>
+                    {range}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              <span>Budget</span>
+              <select name="budget" defaultValue={budgetRanges[0]}>
+                {budgetRanges.map((range) => (
+                  <option disabled={range === budgetRanges[0]} key={range}>
+                    {range}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
 
           <label>
             <span>Project details</span>

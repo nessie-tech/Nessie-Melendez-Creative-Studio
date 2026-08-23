@@ -160,7 +160,10 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /Not sure yet/);
   assert.match(html, /Website refresh/);
   assert.match(html, /New website from scratch/);
-  assert.match(html, /Ballpark budget range/);
+  assert.match(html, /Timeline/);
+  assert.match(html, /Select a timeline/);
+  assert.match(html, /Budget/);
+  assert.match(html, /Select a ballpark range/);
   assert.match(html, /Project details/);
   assert.match(html, /Not sure what you need\? Let&#x27;s just chat/);
   assert.match(html, /First call is always free/);
