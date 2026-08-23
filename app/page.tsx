@@ -40,7 +40,8 @@ const services = [
     titleLines: ["Creative Workshops", "and Consulting"],
     caption:
       "Build your creative capability, workshop demos, hands-on training.",
-    mediaSrc: "/nessie-avatar.mp4",
+    mediaSrc: "/nessie-consult.png",
+    mediaType: "image",
     focalPoint: "50% 50%",
     posterLabel: "Workshop preview",
     posterTime: 0.6,

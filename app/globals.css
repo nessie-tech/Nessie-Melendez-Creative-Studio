@@ -688,20 +688,29 @@ h3 {
     linear-gradient(90deg, rgb(0 0 0 / 0.38), rgb(0 0 0 / 0.02));
 }
 
-.service-offer-video {
+.service-offer-video,
+.service-offer-image {
   position: relative;
   z-index: 1;
   width: 100%;
   height: 100%;
   min-height: 0;
   object-fit: cover;
-  opacity: 0;
   filter: saturate(1.08) contrast(1.04);
   pointer-events: none;
   transform: scale(1.01);
   transition:
     opacity 180ms ease,
     transform 260ms ease;
+}
+
+.service-offer-video {
+  opacity: 0;
+}
+
+.service-offer-image {
+  display: block;
+  opacity: 1;
 }
 
 .service-offer-video[data-ready="true"] {

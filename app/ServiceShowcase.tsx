@@ -8,6 +8,7 @@ type Service = {
   titleLines: string[];
   caption: string;
   mediaSrc: string;
+  mediaType?: "image" | "video";
   focalPoint: string;
   posterLabel: string;
   posterTime?: number;
@@ -44,11 +45,22 @@ function ServiceCard({ service }: { service: Service }) {
         <span className="service-offer-poster">
           <span>{service.posterLabel}</span>
         </span>
-        <AutoPlayVideo
-          className="service-offer-video"
-          src={service.mediaSrc}
-          style={{ objectPosition: service.focalPoint }}
-        />
+        {service.mediaType === "image" ? (
+          <img
+            className="service-offer-image"
+            src={service.mediaSrc}
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            style={{ objectPosition: service.focalPoint }}
+          />
+        ) : (
+          <AutoPlayVideo
+            className="service-offer-video"
+            src={service.mediaSrc}
+            style={{ objectPosition: service.focalPoint }}
+          />
+        )}
       </span>
 
       <span className="service-offer-details">

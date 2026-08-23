@@ -79,7 +79,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /Brand websites built at speed\./);
   assert.doesNotMatch(html, /Brand websites built with speed and strategic direction/);
   assert.match(html, /Creative Workshops and Consulting/);
-  assert.match(html, /nessie-avatar\.mp4/);
+  assert.match(html, /nessie-consult\.png/);
   assert.doesNotMatch(html, /AI-powered creative systems/);
   assert.match(html, /Build your creative capability, workshop demos, hands-on training\./);
   assert.doesNotMatch(html, /Whether it&#x27;s a one-day workshop or ongoing consulting/);
