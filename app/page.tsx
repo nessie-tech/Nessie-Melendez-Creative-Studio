@@ -26,8 +26,8 @@ const services = [
   },
   {
     label: "Service 03",
-    title: "Website Design & Development",
-    titleLines: ["Website Design", "and Development"],
+    title: "Web Design",
+    titleLines: ["Web Design"],
     caption:
       "Brand websites built with speed and strategic direction. We design and develop sites that feel distinctly you—narrative-driven architecture, cohesive visual direction, intentional content placement. Vibe-coded for efficiency, designed for impact. The result is a digital home that positions you clearly and converts.",
     mediaSrc: "/curbie-demo-service.mp4",

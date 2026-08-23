@@ -71,7 +71,7 @@ test("server-renders the portfolio homepage", async () => {
     /Strategic social media content; focused content packs, hero posts, carousel sequences, video and animation concepts, graphics, aligned to your brand narrative and platform strategy\./,
   );
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);
-  assert.match(html, /Website Design &amp; Development/);
+  assert.match(html, /Web Design/);
   assert.doesNotMatch(html, /Content ecosystems/);
   assert.match(html, /curbie-demo-service\.mp4/);
   assert.match(
