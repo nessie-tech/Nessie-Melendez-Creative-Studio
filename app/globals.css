@@ -1154,7 +1154,22 @@ h3 {
   }
 
   .motion-strip {
+    display: flex;
+    align-items: center;
     border-top: 0;
+  }
+
+  .marquee-track {
+    align-items: center;
+    line-height: 1;
+    padding: 0.72rem 0;
+  }
+
+  .hero-positioning-note {
+    font-size: clamp(0.66rem, 2.2vw, 0.78rem);
+    font-weight: 560;
+    line-height: 1.32;
+    color: rgb(255 255 255 / 0.76);
   }
 
   .hero-bottom,

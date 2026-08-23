@@ -39,7 +39,7 @@ const services = [
     title: "Creative Workshops and Consulting",
     titleLines: ["Creative Workshops", "and Consulting"],
     caption:
-      "Build your creative capability, workshop demos, hands-on training.",
+      "Build your creative capability, workshops, demos, hands-on training, systems integration.",
     mediaSrc: "/nessie-consult.png",
     mediaType: "image",
     focalPoint: "50% 50%",
