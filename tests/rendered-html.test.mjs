@@ -163,7 +163,10 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /Timeline/);
   assert.match(html, /Select a timeline/);
   assert.match(html, /Budget/);
-  assert.match(html, /Select a ballpark range/);
+  assert.doesNotMatch(html, /Select a ballpark range/);
+  assert.match(html, /Under \$5K/);
+  assert.match(html, /\$10K-\$25K/);
+  assert.match(html, /\$50K\+/);
   assert.match(html, /Project details/);
   assert.match(html, /Not sure what you need\? Let&#x27;s just chat/);
   assert.match(html, /First call is always free/);

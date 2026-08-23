@@ -10,7 +10,6 @@ const projectNeeds = [
 ];
 
 const budgetRanges = [
-  "Select a ballpark range",
   "Under $5K",
   "$5K-$10K",
   "$10K-$25K",
@@ -102,16 +101,17 @@ export default function StartPage() {
                 ))}
               </select>
             </label>
-            <label>
-              <span>Budget</span>
-              <select name="budget" defaultValue={budgetRanges[0]}>
+            <fieldset className="need-fieldset budget-fieldset">
+              <legend>Budget</legend>
+              <div className="need-pill-grid budget-pill-grid">
                 {budgetRanges.map((range) => (
-                  <option disabled={range === budgetRanges[0]} key={range}>
-                    {range}
-                  </option>
+                  <label className="need-pill" key={range}>
+                    <input name="budget" type="radio" value={range} />
+                    <span>{range}</span>
+                  </label>
                 ))}
-              </select>
-            </label>
+              </div>
+            </fieldset>
           </div>
 
           <label>
