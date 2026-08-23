@@ -53,9 +53,31 @@ function ServiceCard({
   isSelected: boolean;
   service: Service;
 }) {
+  const cardRef = useRef<HTMLButtonElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isMobileInView, setIsMobileInView] = useState(false);
   const [isReady, setIsReady] = useState(false);
   const posterTime = service.posterTime ?? 0.35;
+  const shouldPlay = isPlaying || isMobileInView;
+
+  useEffect(() => {
+    const card = cardRef.current;
+
+    if (!card || !window.matchMedia("(max-width: 820px)").matches) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsMobileInView(entry.isIntersecting && entry.intersectionRatio > 0.45);
+      },
+      { threshold: [0, 0.45, 0.7] },
+    );
+
+    observer.observe(card);
+
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -64,7 +86,7 @@ function ServiceCard({
       return;
     }
 
-    if (isPlaying) {
+    if (shouldPlay) {
       void video.play();
       return;
     }
@@ -74,10 +96,11 @@ function ServiceCard({
     if (Number.isFinite(video.duration) && video.duration > posterTime) {
       video.currentTime = posterTime;
     }
-  }, [isPlaying, posterTime]);
+  }, [posterTime, shouldPlay]);
 
   return (
     <button
+      ref={cardRef}
       className="service-offer-card"
       data-active={isSelected}
       type="button"
@@ -96,7 +119,7 @@ function ServiceCard({
 
       <span
         className="service-offer-media"
-        data-playing={isPlaying}
+        data-playing={shouldPlay}
         data-ready={isReady}
         aria-hidden="true"
       >
@@ -113,7 +136,7 @@ function ServiceCard({
           onLoadedMetadata={(event) => {
             const video = event.currentTarget;
 
-            if (!isPlaying && Number.isFinite(video.duration) && video.duration > posterTime) {
+            if (!shouldPlay && Number.isFinite(video.duration) && video.duration > posterTime) {
               video.currentTime = posterTime;
             }
           }}
@@ -122,7 +145,7 @@ function ServiceCard({
             const video = event.currentTarget;
 
             if (
-              isPlaying &&
+              shouldPlay &&
               Number.isFinite(video.duration) &&
               video.duration > 0 &&
               video.currentTime >= video.duration - 0.08
