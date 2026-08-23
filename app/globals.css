@@ -1163,6 +1163,7 @@ h3 {
     align-items: center;
     line-height: 1;
     padding: 0.72rem 0;
+    transform: translateY(-0.08rem);
   }
 
   .hero-positioning-note {
