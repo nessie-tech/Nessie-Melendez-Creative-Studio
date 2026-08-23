@@ -42,8 +42,8 @@ export default function StartPage() {
           <p className="eyebrow">Start here</p>
           <h1>TELL US ABOUT YOUR PROJECT.</h1>
           <p>
-            Share what you are building, where the brand needs momentum, and
-            what kind of creative support would move it forward.
+            Share what you are building and what kind of creative support would
+            move your business forward.
           </p>
         </div>
 
@@ -121,7 +121,8 @@ export default function StartPage() {
             <a href="mailto:nessie@nessiemelendez.com">
               nessie@nessiemelendez.com
             </a>{" "}
-            with whatever you know so far.
+            with your questions, and we will get back to you as soon as
+            possible.
           </p>
         </aside>
       </section>
