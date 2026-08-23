@@ -1,9 +1,10 @@
 import { AboutTypewriter } from "./AboutTypewriter";
 
 const aboutIntro = [
-  "I'm Nessie. With almost 20 years leading design innovation at a Fortune 50, I'm now consulting independently helping people, brands and businesses to tell their stories with creative AI. I offer deep brand-building experience paired with mastery in design innovation.",
-  "I'm taking early founding clients through December 2026. In exchange for the early founding rate, I ask for a short portfolio piece after the engagement so I can share the work publicly. Disclaimer: I am not able to take CPG collaborations at this time.",
-  "If you're building, growing or even just starting, let's connect. I'd love to get your creative story in motion.",
+  "With almost 18-plus years leading design innovation at a Fortune 50, I am now consulting independently, helping people, brands, and businesses tell their stories with creative AI.",
+  "I'm taking early founding clients through December.",
+  "Disclaimer: I am not able to take CPG collaborations at this time.",
+  "If you're building, growing, or even just starting, let's connect. I'd love to get your creative story in motion.",
 ];
 
 export default function AboutPage() {
