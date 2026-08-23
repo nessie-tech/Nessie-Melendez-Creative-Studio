@@ -230,7 +230,13 @@ a {
   min-height: 100svh;
   object-fit: cover;
   object-position: center center;
+  opacity: 0;
   pointer-events: none;
+  transition: opacity 320ms ease;
+}
+
+.hero-video[data-playing="true"] {
+  opacity: 1;
 }
 
 .hero-video::-webkit-media-controls,
