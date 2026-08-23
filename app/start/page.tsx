@@ -3,10 +3,10 @@ const projectNeeds = [
   "Social media content",
   "Brand refresh",
   "Images",
-  "Not sure yet",
   "Website refresh",
   "New website from scratch",
   "Campaign storytelling",
+  "Not sure yet",
 ];
 
 const budgetRanges = [
@@ -116,21 +116,13 @@ export default function StartPage() {
 
           <label>
             <span>Project details</span>
-            <textarea
-              name="details"
-              rows={7}
-              placeholder="Tell us about your project, timeline, goals, or what feels unclear right now."
-            />
+            <textarea name="details" rows={7} />
           </label>
 
           <div className="intake-actions">
             <button className="button button-primary" type="submit">
-              Start here
+              Submit
             </button>
-            <p>
-              Not sure what you need? Let&apos;s just chat. First call is always
-              free.
-            </p>
           </div>
         </form>
 

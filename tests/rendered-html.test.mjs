@@ -172,8 +172,10 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /\$10K-\$25K/);
   assert.match(html, /\$50K\+/);
   assert.match(html, /Project details/);
-  assert.match(html, /Not sure what you need\? Let&#x27;s just chat/);
-  assert.match(html, /First call is always free/);
+  assert.match(html, />Submit</);
+  assert.doesNotMatch(html, /Tell us about your project, timeline, goals/);
+  assert.doesNotMatch(html, /Not sure what you need\? Let&#x27;s just chat/);
+  assert.doesNotMatch(html, /First call is always free/);
   assert.match(html, /nessie@nessiemelendez\.com/);
 });
 
