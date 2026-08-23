@@ -1009,7 +1009,8 @@ h3 {
   top: clamp(2rem, 6.3vw, 5.7rem);
   left: clamp(1rem, 4vw, 3.4rem);
   z-index: 2;
-  max-width: 11ch;
+  width: max-content;
+  max-width: min(15ch, calc(100% - 2rem));
   text-shadow: 0 0.2rem 2.5rem rgb(0 0 0 / 0.82);
 }
 
@@ -1019,6 +1020,7 @@ h3 {
 
 .about-title-line {
   display: block;
+  white-space: nowrap;
 }
 
 .about-title-name {
@@ -1247,6 +1249,11 @@ h3 {
 
   h2 {
     font-size: clamp(2.45rem, 12vw, 4.1rem);
+  }
+
+  .about-portrait-frame h1 {
+    max-width: calc(100% - 1.6rem);
+    font-size: clamp(2.05rem, 9.8vw, 3.2rem);
   }
 
   .button {
