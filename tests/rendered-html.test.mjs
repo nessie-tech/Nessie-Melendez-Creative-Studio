@@ -60,31 +60,29 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /Brand Strategy and Storytelling/);
   assert.match(
     html,
-    /Define what your brand stands for: visual identity, brand world creation, tone of voice, strategic messaging\. Amplify strategic cinematic storytelling that positions your brand messaging with brand campaigns and digital activations\./,
+    /Visual identity, brand world creation, tone of voice, strategic messaging, cinematic storytelling, brand campaigns, digital activations\./,
   );
+  assert.doesNotMatch(html, /Define what your brand stands for/);
   assert.match(html, /Social Content/);
   assert.match(html, /tsa-social-demo\.mp4/);
   assert.doesNotMatch(html, /Social Content Strategy and Production/);
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);
   assert.match(
     html,
-    /Strategic social media content; focused content packs, hero posts, carousel sequences, video and animation concepts, graphics, aligned to your brand narrative and platform strategy\./,
+    /Customized content packs, carousel sequences, video and animation concepts, kinetic graphics\./,
   );
+  assert.doesNotMatch(html, /Strategic social media content/);
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);
   assert.match(html, /Web Design/);
   assert.doesNotMatch(html, /Content ecosystems/);
   assert.match(html, /curbie-demo-service\.mp4/);
-  assert.match(
-    html,
-    /Brand websites built with speed and strategic direction\. We design and develop sites that feel distinctly you—narrative-driven architecture, cohesive visual direction, intentional content placement\. Vibe-coded for efficiency, designed for impact\. The result is a digital home that positions you clearly and converts\./,
-  );
+  assert.match(html, /Brand websites built at speed\./);
+  assert.doesNotMatch(html, /Brand websites built with speed and strategic direction/);
   assert.match(html, /Creative Workshops and Consulting/);
   assert.match(html, /nessie-avatar\.mp4/);
   assert.doesNotMatch(html, /AI-powered creative systems/);
-  assert.match(
-    html,
-    /Build your creative capability\. Workshops, demos, and hands-on training that teach you or your team design thinking, how to think creatively and use the tools to visualize your brand story, campaign development, and visual content creation\. Whether it&#x27;s a one-day workshop or ongoing consulting, you&#x27;ll leave with frameworks, confidence, and the tools to create on your own\./,
-  );
+  assert.match(html, /Build your creative capability, workshop demos, hands-on training\./);
+  assert.doesNotMatch(html, /Whether it&#x27;s a one-day workshop or ongoing consulting/);
   assert.doesNotMatch(html, /Positioning/);
   assert.doesNotMatch(html, /Campaign worlds/);
   assert.doesNotMatch(html, /Ongoing storylines/);

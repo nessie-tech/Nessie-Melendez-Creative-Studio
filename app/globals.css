@@ -1144,6 +1144,10 @@ h3 {
     padding-top: 7.3rem;
   }
 
+  .motion-strip {
+    border-top: 0;
+  }
+
   .hero-bottom,
   .section-intro,
   .services-section,
