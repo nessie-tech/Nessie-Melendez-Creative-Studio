@@ -9,6 +9,7 @@ const services = [
       "Define what your brand stands for: visual identity, brand world creation, tone of voice, strategic messaging. Amplify strategic cinematic storytelling that positions your brand messaging with brand campaigns and digital activations.",
     mediaSrc: "/nessie-demo-reel.mp4",
     focalPoint: "50% 46%",
+    posterLabel: "Brand world reel",
     posterTime: 1.2,
   },
   {
@@ -19,6 +20,7 @@ const services = [
       "Strategic social media content; focused content packs, hero posts, carousel sequences, video and animation concepts, graphics, aligned to your brand narrative and platform strategy.",
     mediaSrc: "/tsa-social-demo.mp4",
     focalPoint: "42% 50%",
+    posterLabel: "Social content reel",
     posterTime: 0.4,
   },
   {
@@ -29,6 +31,7 @@ const services = [
       "Brand websites built with speed and strategic direction. We design and develop sites that feel distinctly you—narrative-driven architecture, cohesive visual direction, intentional content placement. Vibe-coded for efficiency, designed for impact. The result is a digital home that positions you clearly and converts.",
     mediaSrc: "/curbie-demo-service.mp4",
     focalPoint: "50% 50%",
+    posterLabel: "Website motion reel",
     posterTime: 0.8,
   },
   {
@@ -39,6 +42,7 @@ const services = [
       "Build your creative capability. Workshops, demos, and hands-on training that teach you or your team design thinking, how to think creatively and use the tools to visualize your brand story, campaign development, and visual content creation. Whether it's a one-day workshop or ongoing consulting, you'll leave with frameworks, confidence, and the tools to create on your own.",
     mediaSrc: "/nessie-avatar.mp4",
     focalPoint: "50% 50%",
+    posterLabel: "Workshop preview",
     posterTime: 0.6,
   },
 ];

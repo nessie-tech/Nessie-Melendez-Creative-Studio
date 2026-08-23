@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Service = {
   label: string;
@@ -10,6 +9,7 @@ type Service = {
   caption: string;
   mediaSrc: string;
   focalPoint: string;
+  posterLabel: string;
   posterTime?: number;
 };
 
@@ -54,6 +54,7 @@ function ServiceCard({
   service: Service;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [isReady, setIsReady] = useState(false);
   const posterTime = service.posterTime ?? 0.35;
 
   useEffect(() => {
@@ -84,6 +85,7 @@ function ServiceCard({
       onClick={activate}
       onFocus={activate}
       onMouseEnter={activate}
+      onPointerDown={activate}
     >
       <span className="service-offer-label">{service.label}</span>
       <strong className="service-offer-title" aria-label={service.title}>
@@ -92,7 +94,15 @@ function ServiceCard({
         ))}
       </strong>
 
-      <span className="service-offer-media" aria-hidden="true">
+      <span
+        className="service-offer-media"
+        data-playing={isPlaying}
+        data-ready={isReady}
+        aria-hidden="true"
+      >
+        <span className="service-offer-poster">
+          <span>{service.posterLabel}</span>
+        </span>
         <video
           ref={videoRef}
           className="service-offer-video"
@@ -107,6 +117,7 @@ function ServiceCard({
               video.currentTime = posterTime;
             }
           }}
+          onCanPlay={() => setIsReady(true)}
           onTimeUpdate={(event) => {
             const video = event.currentTarget;
 
