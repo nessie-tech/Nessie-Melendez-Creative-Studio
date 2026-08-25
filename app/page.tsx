@@ -50,7 +50,7 @@ const services = [
 
 const heroPositioning = {
   headlineAccent: "AI-POWERED CREATIVE",
-  headlineBase: "FOR BRANDS IN MOTION",
+  headlineBase: "FOR IDEAS IN MOTION",
   support:
     "IGNITE YOUR BUSINESS WITH DYNAMIC STORYTELLING POWERED BY 18+ YEARS OF BRAND-BUILDING EXPERIENCE AND DESIGN INNOVATION.",
 };
