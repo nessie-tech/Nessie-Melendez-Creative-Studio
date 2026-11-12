@@ -35,10 +35,10 @@ const services = [
   },
   {
     label: "Service 04",
-    title: "Creative Workshops and Consulting",
-    titleLines: ["Creative Workshops", "and Consulting"],
+    title: "Creative Workshops",
+    titleLines: ["Creative Workshops"],
     caption:
-      "Build your creative capability, workshops, demos, hands-on training, systems integration.",
+      "Join an open workshop, or hire me to teach your team or group. Live demos and hands-on training.",
     mediaSrc: "/nessie-consult.png",
     mediaType: "image",
     focalPoint: "50% 50%",
@@ -78,7 +78,7 @@ export default function Home() {
           <a href="#top" aria-current="page">
             Home
           </a>
-          <a href="#services">Services</a>
+          <a href="#services">Creative Tools</a>
           <a href="/about">About</a>
           <a href="/start">Start</a>
         </nav>
@@ -121,14 +121,14 @@ export default function Home() {
 
       <section className="services-section" id="services">
         <div className="section-intro section-intro-compact">
-          <p className="eyebrow">Services</p>
+          <p className="eyebrow">Creative Tools</p>
           <h2>WAYS TO UPSKILL AND LEARN</h2>
         </div>
         <ServiceShowcase services={services} />
       </section>
 
       <section className="contact-section" id="contact">
-        <p className="eyebrow">Now booking</p>
+        <p className="eyebrow">Join the next workshop</p>
         <h2>LET&apos;S KICK OFF YOUR VISION.</h2>
         <a className="button button-primary" href="/start">
           Start here

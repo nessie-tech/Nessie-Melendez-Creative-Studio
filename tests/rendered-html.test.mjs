@@ -53,6 +53,8 @@ test("server-renders the portfolio homepage", async () => {
   assert.ok((html.match(/Become a creator/g) ?? []).length >= 10);
   assert.doesNotMatch(html, /Start a project/);
   assert.match(html, /Learn more/);
+  assert.match(html, /Join the next workshop/);
+  assert.doesNotMatch(html, /Now booking|Consulting|systems integration/);
   assert.doesNotMatch(html, /Trusted to innovate, built for transformation across four strategic areas\./);
   assert.match(html, /WAYS TO UPSKILL AND LEARN/);
   assert.doesNotMatch(
@@ -82,12 +84,12 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /curbie-demo-service\.mp4/);
   assert.match(html, /Learn to build your own website, built at speed\./);
   assert.doesNotMatch(html, /Brand websites built with speed and strategic direction/);
-  assert.match(html, /Creative Workshops and Consulting/);
+  assert.match(html, /Creative Workshops/);
   assert.match(html, /nessie-consult\.png/);
   assert.doesNotMatch(html, /AI-powered creative systems/);
   assert.match(
     html,
-    /Build your creative capability, workshops, demos, hands-on training, systems integration\./,
+    /Join an open workshop, or hire me to teach your team or group\. Live demos and hands-on training\./,
   );
   assert.doesNotMatch(html, /Whether it&#x27;s a one-day workshop or ongoing consulting/);
   assert.doesNotMatch(html, /Positioning/);
@@ -154,17 +156,14 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /Ready to learn the AI tools to tell your story\?/);
   assert.match(html, /Name/);
   assert.match(html, /Email/);
-  assert.match(html, /Brand or business/);
-  assert.match(html, /What do you need\?/);
+  assert.doesNotMatch(html, /Brand or business/);
+  assert.match(html, /What creative tools do you want to learn, and what stories do you want to tell\?/);
   assert.match(html, /<textarea name="needs"/);
   assert.doesNotMatch(html, /Brand identity|Brand refresh|New website from scratch/);
   assert.match(html, /Timeline/);
   assert.match(html, /Select a timeline/);
-  assert.match(html, /Budget/);
+  assert.doesNotMatch(html, /Budget/);
   assert.doesNotMatch(html, /Select a ballpark range/);
-  assert.match(html, /Under \$5K/);
-  assert.match(html, /\$10K-\$25K/);
-  assert.match(html, /\$50K\+/);
   assert.match(html, />Submit</);
   assert.doesNotMatch(html, /Tell us about your project, timeline, goals/);
   assert.doesNotMatch(html, /Not sure what you need\? Let&#x27;s just chat/);

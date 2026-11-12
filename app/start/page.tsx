@@ -1,12 +1,3 @@
-const budgetRanges = [
-  "Under $5K",
-  "$5K-$10K",
-  "$10K-$25K",
-  "$25K-$50K",
-  "$50K+",
-  "Not sure yet",
-];
-
 const timelineRanges = [
   "Select a timeline",
   "As soon as possible",
@@ -26,7 +17,7 @@ export default function StartPage() {
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="/#top">Home</a>
-          <a href="/#services">Services</a>
+          <a href="/#services">Creative Tools</a>
           <a href="/about">About</a>
           <a href="/start" aria-current="page">
             Start
@@ -60,38 +51,20 @@ export default function StartPage() {
           </div>
 
           <label>
-            <span>Brand or business <small>optional</small></span>
-            <input name="brand" type="text" autoComplete="organization" />
-          </label>
-
-          <label>
-            <span>What do you need?</span>
+            <span>What creative tools do you want to learn, and what stories do you want to tell?</span>
             <textarea name="needs" rows={5} />
           </label>
 
-          <div className="form-row">
-            <label>
-              <span>Timeline</span>
-              <select name="timeline" defaultValue={timelineRanges[0]}>
-                {timelineRanges.map((range) => (
-                  <option disabled={range === timelineRanges[0]} key={range}>
-                    {range}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <fieldset className="need-fieldset budget-fieldset">
-              <legend>Budget</legend>
-              <div className="need-pill-grid budget-pill-grid">
-                {budgetRanges.map((range) => (
-                  <label className="need-pill" key={range}>
-                    <input name="budget" type="radio" value={range} />
-                    <span>{range}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-          </div>
+          <label>
+            <span>Timeline</span>
+            <select name="timeline" defaultValue={timelineRanges[0]}>
+              {timelineRanges.map((range) => (
+                <option disabled={range === timelineRanges[0]} key={range}>
+                  {range}
+                </option>
+              ))}
+            </select>
+          </label>
 
           <div className="intake-actions">
             <button className="button button-primary" type="submit">

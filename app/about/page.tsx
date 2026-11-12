@@ -16,7 +16,7 @@ export default function AboutPage() {
         </a>
         <nav className="site-nav" aria-label="Primary navigation">
           <a href="/#top">Home</a>
-          <a href="/#services">Services</a>
+          <a href="/#services">Creative Tools</a>
           <a href="/about" aria-current="page">
             About
           </a>
