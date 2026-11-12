@@ -72,7 +72,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);
   assert.match(
     html,
-    /Learn to create dynamic social media content with tools you can use from home\./,
+    /Learn the tools to create dynamic social media content at scale\./,
   );
   assert.doesNotMatch(html, /Strategic social media content/);
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);

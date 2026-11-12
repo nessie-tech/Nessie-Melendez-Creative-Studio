@@ -17,7 +17,7 @@ const services = [
     title: "AI-Powered Social Media Content",
     titleLines: ["AI-Powered", "Social Media Content"],
     caption:
-      "Learn to create dynamic social media content with tools you can use from home.",
+      "Learn the tools to create dynamic social media content at scale.",
     mediaSrc: "/tsa-social-demo.mp4",
     focalPoint: "42% 50%",
     posterLabel: "Social content reel",
