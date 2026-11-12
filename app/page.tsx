@@ -60,7 +60,7 @@ const tickerItems = [
 const tickerRepeats = 6;
 
 const heroPositioning = {
-  headlineAccent: "LEARN AI CREATIVE.",
+  headlineAccent: "LEARN CREATIVE AI",
   headlineBase: "SET YOUR IDEAS IN MOTION",
   support:
     "IGNITE YOUR VISION WITH CINEMATIC STORYTELLING.",

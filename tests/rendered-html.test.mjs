@@ -32,7 +32,7 @@ test("server-renders the portfolio homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Nessie Melendez \| Creative Direction Portfolio<\/title>/i);
-  assert.match(html, /LEARN AI CREATIVE\./);
+  assert.match(html, /LEARN CREATIVE AI/);
   assert.match(html, /SET YOUR IDEAS IN MOTION/);
   assert.match(html, /NESSIE MELENDEZ/);
   assert.match(html, /CREATIVE STUDIO/);
