@@ -55,9 +55,12 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /Learn more/);
   assert.match(html, /Join the next workshop/);
   assert.match(html, /Live Workshops/);
-  assert.match(html, /Guides, Templates, and Workflow Breakdowns/);
-  assert.match(html, /building with nodes, batching content, and working with tools like Claude/);
-  assert.match(html, /Coming soon/);
+  assert.match(html, /Join an open workshop, or hire me to teach yours\./);
+  assert.match(html, /One-on-one/);
+  assert.match(html, /Larger groups/);
+  assert.match(html, /Cinematic Storytelling, Building with Nodes, and Batching Content/);
+  assert.match(html, /Workflow breakdowns and working with tools like Claude/);
+  assert.doesNotMatch(html, /Guides, Templates|Coming soon/);
   assert.doesNotMatch(html, /Now booking|Consulting|systems integration/);
   assert.doesNotMatch(html, /Trusted to innovate, built for transformation across four strategic areas\./);
   assert.match(html, /WAYS TO UPSKILL AND LEARN/);

@@ -133,19 +133,25 @@ export default function Home() {
           <article className="learn-card">
             <p className="eyebrow">How you learn</p>
             <h3>Live Workshops</h3>
-            <p>
-              In person or virtual. One-on-one, small teams, or larger groups.
-              Join an open workshop, or hire me to teach yours.
-            </p>
+            <p>Join an open workshop, or hire me to teach yours.</p>
+            <ul className="learn-list">
+              <li>In person</li>
+              <li>Virtual</li>
+              <li>One-on-one</li>
+              <li>Small teams</li>
+              <li>Larger groups</li>
+            </ul>
+            <a className="learn-link" href="/start">
+              Ask about a workshop
+            </a>
           </article>
           <article className="learn-card">
             <p className="eyebrow">What you learn</p>
-            <h3>Guides, Templates, and Workflow Breakdowns</h3>
+            <h3>Cinematic Storytelling, Building with Nodes, and Batching Content</h3>
             <p>
-              Cinematic storytelling, building with nodes, batching content, and
-              working with tools like Claude, made approachable for beginners.
+              Workflow breakdowns and working with tools like Claude, made
+              approachable for beginners.
             </p>
-            <p className="learn-note">Coming soon</p>
           </article>
         </div>
       </section>
