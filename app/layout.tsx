@@ -14,9 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nessie Melendez | Creative Direction Portfolio",
+  title: "Nessie Melendez | Creative AI Education",
   description:
-    "A video-led portfolio for Nessie Melendez, focused on services, cinematic storytelling, and a restrained personal story.",
+    "Creative AI education from Nessie Melendez Creative Studio. Workshops and hands-on training in AI cinematic storytelling, social media content, and vibe-coded web design.",
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",

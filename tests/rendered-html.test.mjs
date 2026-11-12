@@ -31,7 +31,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Nessie Melendez \| Creative Direction Portfolio<\/title>/i);
+  assert.match(html, /<title>Nessie Melendez \| Creative AI Education<\/title>/i);
   assert.match(html, /LEARN CREATIVE AI/);
   assert.match(html, /SET YOUR IDEAS IN MOTION/);
   assert.match(html, /NESSIE MELENDEZ/);
@@ -180,7 +180,7 @@ test("keeps the starter preview removed", async () => {
 
   assert.doesNotMatch(page, /const selectedWork = \[/);
   assert.doesNotMatch(page, /const process = \[/);
-  assert.match(layout, /Nessie Melendez \| Creative Direction Portfolio/);
+  assert.match(layout, /Nessie Melendez \| Creative AI Education/);
   assert.doesNotMatch(packageJson, /react-loading-skeleton/);
   assert.doesNotMatch(page, /_sites-preview|SkeletonPreview/);
 
