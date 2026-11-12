@@ -1,14 +1,3 @@
-const projectNeeds = [
-  "Brand identity",
-  "Social media content",
-  "Brand refresh",
-  "Images",
-  "Website refresh",
-  "New website from scratch",
-  "Campaign storytelling",
-  "Not sure yet",
-];
-
 const budgetRanges = [
   "Under $5K",
   "$5K-$10K",
@@ -48,11 +37,8 @@ export default function StartPage() {
       <section className="intake-hero">
         <div className="intake-intro">
           <p className="eyebrow">Start here</p>
-          <h1>TELL US ABOUT YOUR PROJECT.</h1>
-          <p>
-            We are ready to move your business forward. Share some details on
-            how we can best support you.
-          </p>
+          <h1>TELL US ABOUT YOUR LEARNING JOURNEY.</h1>
+          <p>Ready to learn the AI tools to tell your story?</p>
         </div>
 
         <form
@@ -78,17 +64,10 @@ export default function StartPage() {
             <input name="brand" type="text" autoComplete="organization" />
           </label>
 
-          <fieldset className="need-fieldset">
-            <legend>What do you need?</legend>
-            <div className="need-pill-grid">
-              {projectNeeds.map((need) => (
-                <label className="need-pill" key={need}>
-                  <input name="needs" type="checkbox" value={need} />
-                  <span>{need}</span>
-                </label>
-              ))}
-            </div>
-          </fieldset>
+          <label>
+            <span>What do you need?</span>
+            <textarea name="needs" rows={5} />
+          </label>
 
           <div className="form-row">
             <label>
@@ -113,11 +92,6 @@ export default function StartPage() {
               </div>
             </fieldset>
           </div>
-
-          <label>
-            <span>Project details</span>
-            <textarea name="details" rows={7} />
-          </label>
 
           <div className="intake-actions">
             <button className="button button-primary" type="submit">

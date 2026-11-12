@@ -4,10 +4,9 @@ import { ServiceShowcase } from "./ServiceShowcase";
 const services = [
   {
     label: "Service 01",
-    title: "Brand Strategy and Storytelling",
-    titleLines: ["Brand Strategy", "and Storytelling"],
-    caption:
-      "Visual identity, brand world creation, cinematic storytelling, brand campaigns, digital activations.",
+    title: "Cinematic Storytelling",
+    titleLines: ["Cinematic Storytelling"],
+    caption: "Learn the tools to tell your cinematic story.",
     mediaSrc: "/nessie-demo-reel.mp4",
     focalPoint: "50% 46%",
     posterLabel: "Brand world reel",
@@ -18,7 +17,7 @@ const services = [
     title: "Social Content",
     titleLines: ["Social Content"],
     caption:
-      "Customized content packs, carousel sequences, video and animation concepts, kinetic graphics.",
+      "Learn to create dynamic social media content with tools you can use from home.",
     mediaSrc: "/tsa-social-demo.mp4",
     focalPoint: "42% 50%",
     posterLabel: "Social content reel",
@@ -28,7 +27,7 @@ const services = [
     label: "Service 03",
     title: "Web Design",
     titleLines: ["Web Design"],
-    caption: "Brand websites built at speed.",
+    caption: "Learn to build your own website, built at speed.",
     mediaSrc: "/curbie-demo-service.mp4",
     focalPoint: "50% 50%",
     posterLabel: "Website motion reel",
@@ -49,10 +48,10 @@ const services = [
 ];
 
 const heroPositioning = {
-  headlineAccent: "AI-POWERED CREATIVE",
-  headlineBase: "FOR IDEAS IN MOTION",
+  headlineAccent: "LEARN AI-POWERED CREATIVE.",
+  headlineBase: "SET YOUR IDEAS IN MOTION",
   support:
-    "IGNITE YOUR BUSINESS WITH DYNAMIC STORYTELLING POWERED BY 18+ YEARS OF BRAND-BUILDING EXPERIENCE AND DESIGN INNOVATION.",
+    "IGNITE YOUR BUSINESS OR VISION WITH DYNAMIC, CINEMATIC STORYTELLING.",
 };
 
 export default function Home() {
@@ -90,8 +89,8 @@ export default function Home() {
               {heroPositioning.support}
             </p>
             <div className="hero-actions" aria-label="Primary calls to action">
-              <a className="button button-secondary" href="/start">
-                Start a project
+              <a className="button button-secondary" href="#services">
+                Learn more
               </a>
             </div>
           </div>
@@ -101,26 +100,22 @@ export default function Home() {
       <section className="motion-strip" aria-label="Portfolio positioning">
         <div className="marquee-track">
           <span>Social content</span>
-          <span>Brand campaigns</span>
           <span>Cinematic storytelling</span>
-          <span>Visual identity</span>
-          <span>Brand systems</span>
-          <span>Vibe-coded websites</span>
-          <span>Creative consulting</span>
+          <span>AI-powered creative</span>
+          <span>Learn to build</span>
+          <span>Become a creator</span>
           <span>Social content</span>
-          <span>Brand campaigns</span>
           <span>Cinematic storytelling</span>
-          <span>Visual identity</span>
-          <span>Brand systems</span>
-          <span>Vibe-coded websites</span>
-          <span>Creative consulting</span>
+          <span>AI-powered creative</span>
+          <span>Learn to build</span>
+          <span>Become a creator</span>
         </div>
       </section>
 
       <section className="services-section" id="services">
         <div className="section-intro section-intro-compact">
           <p className="eyebrow">Services</p>
-          <h2>WAYS TO COLLABORATE</h2>
+          <h2>WAYS TO UPSKILL AND LEARN</h2>
         </div>
         <ServiceShowcase services={services} />
       </section>

@@ -32,36 +32,34 @@ test("server-renders the portfolio homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Nessie Melendez \| Creative Direction Portfolio<\/title>/i);
-  assert.match(html, /AI-POWERED CREATIVE/);
-  assert.match(html, /FOR IDEAS IN MOTION/);
+  assert.match(html, /LEARN AI-POWERED CREATIVE\./);
+  assert.match(html, /SET YOUR IDEAS IN MOTION/);
   assert.match(html, /NESSIE MELENDEZ/);
   assert.match(html, /CREATIVE STUDIO/);
   assert.doesNotMatch(html, /Nessie Melendez \/ Creative Direction/);
   assert.match(html, /href="#top" aria-current="page">Home/);
   assert.match(
     html,
-    /IGNITE YOUR BUSINESS WITH DYNAMIC STORYTELLING POWERED BY 18\+ YEARS OF BRAND-BUILDING EXPERIENCE AND DESIGN INNOVATION\./,
+    /IGNITE YOUR BUSINESS OR VISION WITH DYNAMIC, CINEMATIC STORYTELLING\./,
   );
   assert.doesNotMatch(html, /Nessie Melendez is an AI-powered creative director and storyteller/);
   assert.match(html, /nessie-demo-reel\.mp4/);
   assert.match(html, /Social content/);
-  assert.match(html, /Brand campaigns/);
   assert.match(html, /Cinematic storytelling/);
-  assert.match(html, /Visual identity/);
-  assert.match(html, /Brand systems/);
-  assert.match(html, /Vibe-coded websites/);
-  assert.match(html, /Creative consulting/);
+  assert.match(html, /AI-powered creative/);
+  assert.match(html, /Learn to build/);
+  assert.match(html, /Become a creator/);
+  assert.doesNotMatch(html, /Brand campaigns|Visual identity|Brand systems|Vibe-coded websites|Creative consulting/);
+  assert.doesNotMatch(html, /Start a project/);
+  assert.match(html, /Learn more/);
   assert.doesNotMatch(html, /Trusted to innovate, built for transformation across four strategic areas\./);
-  assert.match(html, /WAYS TO COLLABORATE/);
+  assert.match(html, /WAYS TO UPSKILL AND LEARN/);
   assert.doesNotMatch(
     html,
     /I build the strategic and creative world around a brand—not just the assets\./,
   );
-  assert.match(html, /Brand Strategy and Storytelling/);
-  assert.match(
-    html,
-    /Visual identity, brand world creation, cinematic storytelling, brand campaigns, digital activations\./,
-  );
+  assert.match(html, /Cinematic Storytelling/);
+  assert.match(html, /Learn the tools to tell your cinematic story\./);
   assert.doesNotMatch(html, /tone of voice/);
   assert.doesNotMatch(html, /strategic messaging/);
   assert.doesNotMatch(html, /Define what your brand stands for/);
@@ -71,14 +69,14 @@ test("server-renders the portfolio homepage", async () => {
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);
   assert.match(
     html,
-    /Customized content packs, carousel sequences, video and animation concepts, kinetic graphics\./,
+    /Learn to create dynamic social media content with tools you can use from home\./,
   );
   assert.doesNotMatch(html, /Strategic social media content/);
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);
   assert.match(html, /Web Design/);
   assert.doesNotMatch(html, /Content ecosystems/);
   assert.match(html, /curbie-demo-service\.mp4/);
-  assert.match(html, /Brand websites built at speed\./);
+  assert.match(html, /Learn to build your own website, built at speed\./);
   assert.doesNotMatch(html, /Brand websites built with speed and strategic direction/);
   assert.match(html, /Creative Workshops and Consulting/);
   assert.match(html, /nessie-consult\.png/);
@@ -127,7 +125,7 @@ test("server-renders the restrained about page", async () => {
   assert.doesNotMatch(html, /She blends deep brand-building experience/);
   assert.match(
     html,
-    /With almost 18-plus years leading design innovation at a Fortune 50, I am now consulting independently, helping people, brands, and businesses tell their stories with creative AI\./,
+    /With almost 18-plus years leading design innovation at big corporate, I am helping people and businesses learn to tell cinematic stories with creative AI\./,
   );
   assert.doesNotMatch(html, /I&#x27;m taking early founding clients through December\./);
   assert.match(html, /Disclaimer: I am not able to take CPG collaborations at this time\./);
@@ -148,22 +146,14 @@ test("server-renders the project intake page", async () => {
   const html = await response.text();
   assert.match(html, /START HERE/i);
   assert.match(html, /href="\/#top">Home/);
-  assert.match(html, /TELL US ABOUT YOUR PROJECT\./);
-  assert.match(
-    html,
-    /We are ready to move your business forward\. Share some details on how we can best support you\./,
-  );
+  assert.match(html, /TELL US ABOUT YOUR LEARNING JOURNEY\./);
+  assert.match(html, /Ready to learn the AI tools to tell your story\?/);
   assert.match(html, /Name/);
   assert.match(html, /Email/);
   assert.match(html, /Brand or business/);
   assert.match(html, /What do you need\?/);
-  assert.match(html, /Brand identity/);
-  assert.match(html, /Social media content/);
-  assert.match(html, /Brand refresh/);
-  assert.match(html, /Images/);
-  assert.match(html, /Not sure yet/);
-  assert.match(html, /Website refresh/);
-  assert.match(html, /New website from scratch/);
+  assert.match(html, /<textarea name="needs"/);
+  assert.doesNotMatch(html, /Brand identity|Brand refresh|New website from scratch/);
   assert.match(html, /Timeline/);
   assert.match(html, /Select a timeline/);
   assert.match(html, /Budget/);
@@ -171,7 +161,6 @@ test("server-renders the project intake page", async () => {
   assert.match(html, /Under \$5K/);
   assert.match(html, /\$10K-\$25K/);
   assert.match(html, /\$50K\+/);
-  assert.match(html, /Project details/);
   assert.match(html, />Submit</);
   assert.doesNotMatch(html, /Tell us about your project, timeline, goals/);
   assert.doesNotMatch(html, /Not sure what you need\? Let&#x27;s just chat/);
