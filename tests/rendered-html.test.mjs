@@ -32,7 +32,7 @@ test("server-renders the portfolio homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Nessie Melendez \| Creative Direction Portfolio<\/title>/i);
-  assert.match(html, /LEARN AI-POWERED CREATIVE\./);
+  assert.match(html, /LEARN AI CREATIVE\./);
   assert.match(html, /SET YOUR IDEAS IN MOTION/);
   assert.match(html, /NESSIE MELENDEZ/);
   assert.match(html, /CREATIVE STUDIO/);
@@ -50,6 +50,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /Learn to build/);
   assert.match(html, /Become a creator/);
   assert.doesNotMatch(html, /Brand campaigns|Visual identity|Brand systems|Vibe-coded websites|Creative consulting/);
+  assert.ok((html.match(/Become a creator/g) ?? []).length >= 10);
   assert.doesNotMatch(html, /Start a project/);
   assert.match(html, /Learn more/);
   assert.doesNotMatch(html, /Trusted to innovate, built for transformation across four strategic areas\./);
@@ -58,12 +59,14 @@ test("server-renders the portfolio homepage", async () => {
     html,
     /I build the strategic and creative world around a brand—not just the assets\./,
   );
-  assert.match(html, /Cinematic Storytelling/);
+  assert.match(html, /AI Cinematic/);
+  assert.match(html, /Storytelling/);
   assert.match(html, /Learn the tools to tell your cinematic story\./);
   assert.doesNotMatch(html, /tone of voice/);
   assert.doesNotMatch(html, /strategic messaging/);
   assert.doesNotMatch(html, /Define what your brand stands for/);
-  assert.match(html, /Social Content/);
+  assert.match(html, /AI and Social/);
+  assert.match(html, /Media Content/);
   assert.match(html, /tsa-social-demo\.mp4/);
   assert.doesNotMatch(html, /Social Content Strategy and Production/);
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);
@@ -73,6 +76,7 @@ test("server-renders the portfolio homepage", async () => {
   );
   assert.doesNotMatch(html, /Strategic social media content/);
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);
+  assert.match(html, /Vibe-Coded/);
   assert.match(html, /Web Design/);
   assert.doesNotMatch(html, /Content ecosystems/);
   assert.match(html, /curbie-demo-service\.mp4/);

@@ -289,7 +289,7 @@ h1 {
 .hero-headline {
   display: grid;
   gap: 0.02em;
-  max-width: 14ch;
+  max-width: 18ch;
   font-size: clamp(2.4rem, 6.45vw, 5.85rem);
   font-weight: 760;
   line-height: 0.9;
@@ -297,6 +297,7 @@ h1 {
 
 .hero-headline span {
   display: block;
+  text-wrap: balance;
 }
 
 .hero-headline-accent {

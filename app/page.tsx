@@ -4,8 +4,8 @@ import { ServiceShowcase } from "./ServiceShowcase";
 const services = [
   {
     label: "Service 01",
-    title: "Cinematic Storytelling",
-    titleLines: ["Cinematic Storytelling"],
+    title: "AI Cinematic Storytelling",
+    titleLines: ["AI Cinematic", "Storytelling"],
     caption: "Learn the tools to tell your cinematic story.",
     mediaSrc: "/nessie-demo-reel.mp4",
     focalPoint: "50% 46%",
@@ -14,8 +14,8 @@ const services = [
   },
   {
     label: "Service 02",
-    title: "Social Content",
-    titleLines: ["Social Content"],
+    title: "AI and Social Media Content",
+    titleLines: ["AI and Social", "Media Content"],
     caption:
       "Learn to create dynamic social media content with tools you can use from home.",
     mediaSrc: "/tsa-social-demo.mp4",
@@ -25,8 +25,8 @@ const services = [
   },
   {
     label: "Service 03",
-    title: "Web Design",
-    titleLines: ["Web Design"],
+    title: "Vibe-Coded Web Design",
+    titleLines: ["Vibe-Coded", "Web Design"],
     caption: "Learn to build your own website, built at speed.",
     mediaSrc: "/curbie-demo-service.mp4",
     focalPoint: "50% 50%",
@@ -47,8 +47,20 @@ const services = [
   },
 ];
 
+const tickerItems = [
+  "Social content",
+  "Cinematic storytelling",
+  "AI-powered creative",
+  "Learn to build",
+  "Become a creator",
+];
+
+// The track scrolls by half its width, so it is two identical halves.
+// Each half repeats the list enough times to be wider than any screen.
+const tickerRepeats = 6;
+
 const heroPositioning = {
-  headlineAccent: "LEARN AI-POWERED CREATIVE.",
+  headlineAccent: "LEARN AI CREATIVE.",
   headlineBase: "SET YOUR IDEAS IN MOTION",
   support:
     "IGNITE YOUR BUSINESS OR VISION WITH DYNAMIC, CINEMATIC STORYTELLING.",
@@ -99,16 +111,11 @@ export default function Home() {
 
       <section className="motion-strip" aria-label="Portfolio positioning">
         <div className="marquee-track">
-          <span>Social content</span>
-          <span>Cinematic storytelling</span>
-          <span>AI-powered creative</span>
-          <span>Learn to build</span>
-          <span>Become a creator</span>
-          <span>Social content</span>
-          <span>Cinematic storytelling</span>
-          <span>AI-powered creative</span>
-          <span>Learn to build</span>
-          <span>Become a creator</span>
+          {Array.from({ length: 2 * tickerRepeats }, (_, copy) =>
+            tickerItems.map((item) => (
+              <span key={`${copy}-${item}`}>{item}</span>
+            )),
+          )}
         </div>
       </section>
 
