@@ -6,7 +6,8 @@ const services = [
     label: "Service 01",
     title: "AI Cinematic Storytelling",
     titleLines: ["AI Cinematic", "Storytelling"],
-    caption: "Learn the tools to tell your cinematic story.",
+    caption:
+      "Learn the tools to tell your cinematic story with end-to-end process and flows.",
     mediaSrc: "/nessie-demo-reel.mp4",
     focalPoint: "50% 46%",
     posterLabel: "Brand world reel",
@@ -17,7 +18,7 @@ const services = [
     title: "AI-Powered Social Media Content",
     titleLines: ["AI-Powered", "Social Media Content"],
     caption:
-      "Learn the tools to create dynamic social media content at scale.",
+      "Learn the tools to create dynamic social media content at scale: images, carousels, animations, and edits.",
     mediaSrc: "/tsa-social-demo.mp4",
     focalPoint: "42% 50%",
     posterLabel: "Social content reel",
@@ -63,7 +64,7 @@ const heroPositioning = {
   headlineAccent: "LEARN CREATIVE AI",
   headlineBase: "SET YOUR IDEAS IN MOTION",
   support:
-    "IGNITE YOUR VISION WITH CINEMATIC STORYTELLING.",
+    "LEARN THE CREATIVE TOOLS THAT BRING STORYTELLING TO LIFE.",
 };
 
 export default function Home() {
@@ -125,6 +126,28 @@ export default function Home() {
           <h2>WAYS TO UPSKILL AND LEARN</h2>
         </div>
         <ServiceShowcase services={services} />
+      </section>
+
+      <section className="learn-section" id="learn" aria-label="How and what you learn">
+        <div className="learn-grid">
+          <article className="learn-card">
+            <p className="eyebrow">How you learn</p>
+            <h3>Live Workshops</h3>
+            <p>
+              In person or virtual. One-on-one, small teams, or larger groups.
+              Join an open workshop, or hire me to teach yours.
+            </p>
+          </article>
+          <article className="learn-card">
+            <p className="eyebrow">What you learn</p>
+            <h3>Guides, Templates, and Workflow Breakdowns</h3>
+            <p>
+              Cinematic storytelling, building with nodes, batching content, and
+              working with tools like Claude, made approachable for beginners.
+            </p>
+            <p className="learn-note">Coming soon</p>
+          </article>
+        </div>
       </section>
 
       <section className="contact-section" id="contact">

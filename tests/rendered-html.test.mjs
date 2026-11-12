@@ -40,7 +40,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /href="#top" aria-current="page">Home/);
   assert.match(
     html,
-    /IGNITE YOUR VISION WITH CINEMATIC STORYTELLING\./,
+    /LEARN THE CREATIVE TOOLS THAT BRING STORYTELLING TO LIFE\./,
   );
   assert.doesNotMatch(html, /Nessie Melendez is an AI-powered creative director and storyteller/);
   assert.match(html, /nessie-demo-reel\.mp4/);
@@ -54,6 +54,10 @@ test("server-renders the portfolio homepage", async () => {
   assert.doesNotMatch(html, /Start a project/);
   assert.match(html, /Learn more/);
   assert.match(html, /Join the next workshop/);
+  assert.match(html, /Live Workshops/);
+  assert.match(html, /Guides, Templates, and Workflow Breakdowns/);
+  assert.match(html, /building with nodes, batching content, and working with tools like Claude/);
+  assert.match(html, /Coming soon/);
   assert.doesNotMatch(html, /Now booking|Consulting|systems integration/);
   assert.doesNotMatch(html, /Trusted to innovate, built for transformation across four strategic areas\./);
   assert.match(html, /WAYS TO UPSKILL AND LEARN/);
@@ -63,7 +67,7 @@ test("server-renders the portfolio homepage", async () => {
   );
   assert.match(html, /AI Cinematic/);
   assert.match(html, /Storytelling/);
-  assert.match(html, /Learn the tools to tell your cinematic story\./);
+  assert.match(html, /Learn the tools to tell your cinematic story with end-to-end process and flows\./);
   assert.doesNotMatch(html, /tone of voice/);
   assert.doesNotMatch(html, /strategic messaging/);
   assert.doesNotMatch(html, /Define what your brand stands for/);
@@ -74,7 +78,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);
   assert.match(
     html,
-    /Learn the tools to create dynamic social media content at scale\./,
+    /Learn the tools to create dynamic social media content at scale: images, carousels, animations, and edits\./,
   );
   assert.doesNotMatch(html, /Strategic social media content/);
   assert.doesNotMatch(html, /Each asset is thoughtfully directed for impact/);
