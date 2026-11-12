@@ -40,7 +40,7 @@ test("server-renders the portfolio homepage", async () => {
   assert.match(html, /href="#top" aria-current="page">Home/);
   assert.match(
     html,
-    /IGNITE YOUR BUSINESS OR VISION WITH DYNAMIC, CINEMATIC STORYTELLING\./,
+    /IGNITE YOUR VISION WITH CINEMATIC STORYTELLING\./,
   );
   assert.doesNotMatch(html, /Nessie Melendez is an AI-powered creative director and storyteller/);
   assert.match(html, /nessie-demo-reel\.mp4/);
@@ -65,8 +65,8 @@ test("server-renders the portfolio homepage", async () => {
   assert.doesNotMatch(html, /tone of voice/);
   assert.doesNotMatch(html, /strategic messaging/);
   assert.doesNotMatch(html, /Define what your brand stands for/);
-  assert.match(html, /AI and Social/);
-  assert.match(html, /Media Content/);
+  assert.match(html, /AI-Powered/);
+  assert.match(html, /Social Media Content/);
   assert.match(html, /tsa-social-demo\.mp4/);
   assert.doesNotMatch(html, /Social Content Strategy and Production/);
   assert.doesNotMatch(html, /Campaigns &amp; Storytelling/);

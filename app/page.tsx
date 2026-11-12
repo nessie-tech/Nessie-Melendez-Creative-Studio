@@ -14,8 +14,8 @@ const services = [
   },
   {
     label: "Service 02",
-    title: "AI and Social Media Content",
-    titleLines: ["AI and Social", "Media Content"],
+    title: "AI-Powered Social Media Content",
+    titleLines: ["AI-Powered", "Social Media Content"],
     caption:
       "Learn to create dynamic social media content with tools you can use from home.",
     mediaSrc: "/tsa-social-demo.mp4",
@@ -63,7 +63,7 @@ const heroPositioning = {
   headlineAccent: "LEARN AI CREATIVE.",
   headlineBase: "SET YOUR IDEAS IN MOTION",
   support:
-    "IGNITE YOUR BUSINESS OR VISION WITH DYNAMIC, CINEMATIC STORYTELLING.",
+    "IGNITE YOUR VISION WITH CINEMATIC STORYTELLING.",
 };
 
 export default function Home() {

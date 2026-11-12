@@ -433,7 +433,7 @@ h3 {
   font-family: var(--font-geist-mono), monospace;
   font-size: clamp(0.74rem, 1.45vw, 0.98rem);
   text-transform: uppercase;
-  animation: drift 26s linear infinite;
+  animation: drift 156s linear infinite;
 }
 
 .marquee-track span {
